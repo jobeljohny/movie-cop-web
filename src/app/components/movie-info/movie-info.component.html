@@ -1,1 +1,9 @@
-<p>movie-info works!</p>
+<div class="info-container">
+  @if (movie) {
+  <div class="description">
+    {{ movie.description_full }}
+  </div>
+  } @else {
+  <span>Select a movie card to view information</span>
+  }
+</div>

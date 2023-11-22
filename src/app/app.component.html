@@ -1,4 +1,14 @@
-<div class="main-body" [class.min-body]="resultsLoaded">
+<div
+  class="main-body"
+  [class.min-body]="resultsLoaded"
+  [ngStyle]="{
+    'background-image': activeMovie
+      ? 'url(' + activeMovie.background_image + ')'
+      : 'none',
+    'background-size': 'cover',
+    'background-repeat': 'no-repeat'
+  }"
+>
   <div class="search-container">
     <img src="../assets/mainlogo.svg" alt="" />
     <span class="title">Movie Cop</span>
@@ -9,8 +19,11 @@
   </div>
   @if (resultsLoaded) {
   <div class="movie-list-container">
-    <app-movie-list [movies]="movies"></app-movie-list>
-    <app-movie-info></app-movie-info>
+    <app-movie-list
+      [movies]="movies"
+      (onClick)="updateInfo($event)"
+    ></app-movie-list>
+    <app-movie-info [movie]="activeMovie"></app-movie-info>
   </div>
   }
 </div>

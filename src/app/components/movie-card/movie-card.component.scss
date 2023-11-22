@@ -1,7 +1,7 @@
 .movie-card {
   height: 220px;
   width: 100%;
-  background-color: rgb(39, 39, 39);
+  background-color: rgba(61, 61, 61, 0.7);
   border-radius: 4px;
   display: flex;
   padding: 6px;
@@ -20,5 +20,12 @@
     .movie-title {
       font-size: 1.4rem;
     }
+    hr {
+      margin: 12px 0px;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(61, 61, 61, 0.8);
   }
 }

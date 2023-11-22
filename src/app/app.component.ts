@@ -23,6 +23,7 @@ import { MovieInfoComponent } from './components/movie-info/movie-info.component
 export class AppComponent {
   resultsLoaded = false;
   term: string = '';
+  activeMovie: Movie | undefined = undefined;
   movies: Movie[] = [];
   updateResult(searchResult: SearchResult) {
     this.term = searchResult.query;
@@ -30,5 +31,9 @@ export class AppComponent {
       this.resultsLoaded = true;
       this.movies = searchResult.result.movies;
     }
+  }
+
+  updateInfo(movie: Movie) {
+    this.activeMovie = movie;
   }
 }
