@@ -1,0 +1,10 @@
+<div class="stack">
+  @for (torrent of torrents; track $index) {
+  <div class="btn-wrap">
+    <button (click)="download(torrent.hash)">
+      {{ torrent.quality }} {{ torrent.type }}
+    </button>
+    <span class="badge">{{ torrent.size }}</span>
+  </div>
+  }
+</div>

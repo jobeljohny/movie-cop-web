@@ -4,11 +4,17 @@ import { Movie } from '../../classes/Movie';
 import { RatingBarComponent } from '../rating-bar/rating-bar.component';
 import { getRuntime } from '../../classes/common';
 import { GenreStackComponent } from '../genre-stack/genre-stack.component';
+import { DownloadButtonsStackComponent } from '../download-buttons-stack/download-buttons-stack.component';
 
 @Component({
   selector: 'app-movie-card',
   standalone: true,
-  imports: [CommonModule, RatingBarComponent, GenreStackComponent],
+  imports: [
+    CommonModule,
+    RatingBarComponent,
+    GenreStackComponent,
+    DownloadButtonsStackComponent,
+  ],
   templateUrl: './movie-card.component.html',
   styleUrl: './movie-card.component.scss',
 })

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ApiService } from '../../services/api.service';
 import { Output, EventEmitter } from '@angular/core';
 import { mockSearchResult } from '../../classes/mock';
-import { SearchResult } from '../../classes/searchResult';
+import { SearchData, SearchResult } from '../../classes/searchResult';
 
 @Component({
   selector: 'app-search',

@@ -2,7 +2,9 @@
   <div class="search-container">
     <img src="../assets/mainlogo.svg" alt="" />
     <span class="title">Movie Cop</span>
-
+    <div class="result-info">
+      Search Results: {{ movies.length }} Movies Found for '{{ term }}'
+    </div>
     <app-search (onResult)="updateResult($event)"></app-search>
   </div>
   @if (resultsLoaded) {

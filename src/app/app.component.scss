@@ -25,6 +25,9 @@
   .movie-list-container {
     display: none;
   }
+  .result-info {
+    display: none;
+  }
 }
 .min-body {
   .search-container {
@@ -53,5 +56,13 @@
     app-movie-list {
       flex-basis: 65%;
     }
+  }
+  .result-info {
+    display: block;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3rem;
   }
 }

@@ -1,0 +1,28 @@
+@import "../../styles/palette.scss";
+.stack {
+  display: flex;
+  gap: 26px;
+  .btn-wrap {
+    position: relative;
+    button {
+      font-family: Helvetica;
+      font-size: 0.7rem;
+      background: #673ab7;
+      color: white;
+      border-radius: 20px;
+      padding: 6px 12px;
+      border: 0px;
+    }
+    .badge {
+      top: -7px;
+      right: -20px;
+      position: absolute;
+      z-index: 1;
+      font-size: 0.6rem;
+      background: $primary;
+      color: black;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+  }
+}
