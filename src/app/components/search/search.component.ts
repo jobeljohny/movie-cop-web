@@ -16,16 +16,21 @@ export class SearchComponent {
   @Output('onResult') updateResult = new EventEmitter<SearchResult>();
   constructor(private api: ApiService) {
     //TODO remove
-    setTimeout(() => {
-      this.search('test');
-    }, 100);
+    //setTimeout(() => {
+    //  this.search('test');
+    //}, 100);
   }
   search(movieName: string) {
-    this.updateResult.emit(mockSearchResult);
-    return;
+    //this.updateResult.emit(mockSearchResult);
+    //  return;
     this.api.search(movieName).subscribe({
       next: (value: any) => {
-        this.updateResult.emit(value['data']);
+        const result: SearchResult = {
+          query: movieName,
+          result: value['data'],
+        };
+
+        this.updateResult.emit(result);
       },
       error: (err) => {
         console.log('emitted an error: ');

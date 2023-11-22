@@ -1,7 +1,11 @@
 <div class="info-container">
   @if (movie) {
   <div class="description">
-    {{ movie.description_full }}
+    <div class="title">{{ movie.title }}</div>
+    <div class="cover">
+      <img [src]="movie.medium_cover_image" alt="" />
+    </div>
+    <div class="content">{{ movie.description_full }}</div>
   </div>
   } @else {
   <span>Select a movie card to view information</span>
