@@ -1,0 +1,31 @@
+.input-wrapper {
+  width: 100%;
+  position: relative;
+  input {
+    border: 0px;
+    background: none;
+    font-size: 1.5rem;
+    color: white;
+    padding: 8px 16px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 2px white;
+    background: rgb(32, 32, 32);
+    &:focus {
+      outline: none;
+    }
+  }
+  img {
+    position: absolute;
+    height: 100%;
+    right: 8px;
+    top: 0;
+    width: 30px;
+    filter: invert(69%) sepia(84%) saturate(271%) hue-rotate(355deg)
+      brightness(102%) contrast(101%);
+    &:hover {
+      cursor: pointer;
+      filter: invert(1);
+    }
+  }
+}
