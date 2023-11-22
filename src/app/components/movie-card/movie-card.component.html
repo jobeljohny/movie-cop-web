@@ -3,10 +3,10 @@
     <img [src]="movie.medium_cover_image" alt="" />
   </div>
   <div class="content-container">
-    <div class="movie-title">{{ movie.title }} ({{ movie.year }})</div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="movie-title">{{ movie.title }} ( {{ movie.year }} )</div>
+    <app-rating-bar [rating]="movie.rating"></app-rating-bar>
+    <div>Runtime :{{ Runtime }}</div>
+    <app-genre-stack [genres]="movie.genres"></app-genre-stack>
     <div></div>
   </div>
 </div>

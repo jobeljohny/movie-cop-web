@@ -1,0 +1,5 @@
+<div class="genres">
+  @for (genre of genres; track $index) {
+  <span [style.background]="colors[$index % 6]">{{ genre }}</span>
+  }
+</div>

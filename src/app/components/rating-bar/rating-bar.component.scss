@@ -1,0 +1,31 @@
+@import "../../styles/palette.scss";
+.rating-container {
+  display: flex;
+  align-items: center;
+  .rating-title {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: rgb(223, 223, 223);
+  }
+  .star-stack {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    img {
+      width: 20px;
+      margin-left: 5px;
+    }
+    .dim {
+      filter: brightness(0.15);
+    }
+  }
+  .imdb {
+    font-family: optima, sans-serif;
+    font-size: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.318);
+    color: $primary;
+    padding: 2px 8px;
+    margin-left: 12px;
+    border-radius: 4px;
+  }
+}

@@ -1,1 +1,11 @@
-<p>rating-bar works!</p>
+<div class="rating-container">
+  <span class="rating-title">RATING : </span>
+  <div class="star-stack">
+    @for ( _ of [].constructor(Rating); track $index) {
+    <img src="../../../assets/star.svg" alt="" />
+    } @for ( _ of [].constructor(10-Rating); track $index) {
+    <img class="dim" src="../../../assets/star.svg" alt="" />
+    }
+  </div>
+  <div class="imdb">IMDb {{ rating }}</div>
+</div>
