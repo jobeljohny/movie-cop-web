@@ -5,7 +5,9 @@
     <div class="cover">
       <img [src]="movie.medium_cover_image" alt="" />
     </div>
+    <div class="content-wrapper"> 
     <div class="content">{{ movie.description_full }}</div>
+    </div>
   </div>
   } @else {
   <span>Select a movie card to view information</span>

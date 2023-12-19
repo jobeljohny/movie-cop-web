@@ -7,3 +7,17 @@ html,
 body {
   height: 100%;
 }
+//scrollbar css
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #3f3f3f;
+}
+::-webkit-scrollbar-thumb {
+  background: #4f60aa;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8292da;
+}

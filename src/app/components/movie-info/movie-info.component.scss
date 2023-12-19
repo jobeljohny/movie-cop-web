@@ -25,11 +25,16 @@
       img {
       }
     }
-    .content {
+    .content-wrapper {
       margin-top: 2rem;
       padding: 0px 20px;
-      font-size: 0.8rem;
-      color: aliceblue;
+      flex-grow: 1;
+      .content {
+        overflow-y: auto;
+        max-height: 300px;
+        font-size: 0.8rem;
+        color: aliceblue;
+      }
     }
   }
 }
