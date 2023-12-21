@@ -1,4 +1,11 @@
 <div class="input-wrapper">
   <input #input type="text" (keyup.enter)="search(input.value)" />
-  <img (click)="search(input.value)" src="../../../assets/search.svg" alt="" />
+  @if (Loader.isLoading$  | async) {<app-spinner></app-spinner>} @else {
+  <img
+    class="search-icon"
+    (click)="search(input.value)"
+    src="../../../assets/search.svg"
+    alt=""
+  />
+  }
 </div>

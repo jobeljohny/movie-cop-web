@@ -4,22 +4,19 @@ import { ApiService } from '../../services/api.service';
 import { Output, EventEmitter } from '@angular/core';
 import { mockSearchResult } from '../../classes/mock';
 import { SearchData, SearchResult } from '../../classes/searchResult';
+import { SpinnerComponent } from '../spinner/spinner.component';
+import { LoaderService } from '../../services/loader.service';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SpinnerComponent],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
 })
 export class SearchComponent {
   @Output('onResult') updateResult = new EventEmitter<SearchResult>();
-  constructor(private api: ApiService) {
-    //TODO remove
-    //setTimeout(() => {
-    //  this.search('test');
-    //}, 100);
-  }
+  constructor(private api: ApiService, private loader: LoaderService) {}
   search(movieName: string) {
     //this.updateResult.emit(mockSearchResult);
     //  return;
@@ -40,4 +37,9 @@ export class SearchComponent {
       //    console.log(done'),
     });
   }
+
+  get Loader(){
+    return this.loader;
+  }
+
 }
