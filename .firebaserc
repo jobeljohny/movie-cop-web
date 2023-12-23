@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "themoviecop"
+  },
+  "targets": {
+    "themoviecop": {
+      "hosting": {
+        "movie-cop": [
+          "themoviecop"
+        ]
+      }
+    }
+  }
+}

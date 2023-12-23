@@ -1,0 +1,23 @@
+{
+  "hosting": [
+    {
+      "public": "dist/movie-cop/browser",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "movie-cop",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
