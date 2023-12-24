@@ -36,4 +36,11 @@ export class AppComponent {
   updateInfo(movie: Movie) {
     this.activeMovie = movie;
   }
+
+  home(){
+    this.resultsLoaded = false;
+    this.term ='';
+    this.activeMovie = undefined;
+    this.movies=[];
+  }
 }
