@@ -22,7 +22,6 @@ export class SearchComponent {
     private loader: LoaderService,
     private toast: ToastrService
   ) {
-    setTimeout(() => this.search(''), 10);
   }
 
   search(movieName: string) {
