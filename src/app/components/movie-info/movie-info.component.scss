@@ -1,9 +1,9 @@
 .info-container {
   display: flex;
-  //background: red;
   height: 100%;
   width: 100%;
   .description {
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -30,8 +30,6 @@
       padding: 0px 20px;
       flex-grow: 1;
       .content {
-        overflow-y: auto;
-        max-height: 300px;
         font-size: 0.8rem;
         color: aliceblue;
       }

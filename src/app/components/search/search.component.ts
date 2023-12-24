@@ -16,10 +16,14 @@ import { LoaderService } from '../../services/loader.service';
 })
 export class SearchComponent {
   @Output('onResult') updateResult = new EventEmitter<SearchResult>();
-  constructor(private api: ApiService, private loader: LoaderService) {}
+  constructor(private api: ApiService, private loader: LoaderService) {
+
+    setTimeout(()=>this.search(''),10)
+  }
+
   search(movieName: string) {
-    //this.updateResult.emit(mockSearchResult);
-    //  return;
+    this.updateResult.emit(mockSearchResult);
+      return;
     this.api.search(movieName).subscribe({
       next: (value: any) => {
         const result: SearchResult = {

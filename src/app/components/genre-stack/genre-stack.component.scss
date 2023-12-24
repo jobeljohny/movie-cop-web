@@ -10,3 +10,15 @@
     border-radius: 6px;
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .genres {
+    flex-wrap: wrap;
+    gap: 8px;
+    span {
+      font-size: 0.6rem;
+      padding: 3px 7px;
+      border-radius: 6px;
+    }
+  }
+}

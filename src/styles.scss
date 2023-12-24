@@ -1,4 +1,12 @@
 $background-primary: #161616;
+
+html{
+ box-sizing: border-box;
+ 
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 body {
   background: $background-primary;
   color: white;
@@ -6,7 +14,9 @@ body {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
+
 //scrollbar css
 ::-webkit-scrollbar {
   width: 4px;
@@ -20,4 +30,7 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #8292da;
+}
+@media only screen and (max-width: 576px){
+
 }

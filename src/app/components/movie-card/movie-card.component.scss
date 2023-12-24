@@ -29,3 +29,44 @@
     background-color: rgba(61, 61, 61, 0.8);
   }
 }
+.movie-card-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .movie-card {
+    display: none;
+  }
+  .movie-card-mobile {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 96vw;
+    background-color: rgba(61, 61, 61, 0.7);
+    border-radius: 4px;
+    display: flex;
+    padding: 6px;
+    .image-container {
+      height: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 2%;
+      img {
+        height: 100%;
+        width: 95%;
+        object-fit: cover;
+        border-radius: 2px;
+      }
+    }
+    .movie-title {
+      font-size: 1rem;
+      margin-top: 6px;
+      text-align: center;
+    }
+    .runtime{
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -33,6 +33,7 @@
     height: 100px;
     margin-top: 0px;
     padding: 16px 0px;
+    background: rgba(0, 0, 0, 0.5);
     flex-direction: row;
     .title {
       font-size: 2rem;
@@ -50,13 +51,16 @@
     }
   }
   .movie-list-container {
+    padding-top: 8px;
     display: flex;
-    flex-grow: 1;
+    height: calc(100vh - 100px - 16px);
     app-movie-list {
       flex-basis: 65%;
+      height: 100%;
     }
     app-movie-info {
       flex-basis: 35%;
+      height: 100%;
     }
   }
   .result-info {
@@ -67,4 +71,56 @@
     margin-right: auto;
     font-size: 1.3rem;
   }
+}
+@media only screen and (max-width: 576px){
+.main-body {
+  .search-container {
+    margin-top: 30%;
+    .title {
+      font-size: 2rem;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    app-search {
+      margin-top: 16px;
+      width: 85%;
+    }
+  }
+}
+.min-body {
+  .search-container {
+    height: 100px;
+    margin-top: 0px;
+    padding: 8px 0px;
+    flex-direction: row;
+    .title {
+      display: none;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      margin: 8px 12px;
+    }
+    app-search {
+     display: none;
+    }
+  }
+  .movie-list-container {
+  
+    height: calc(100vh - 100px - 20px);
+    padding-top: 3px;
+    app-movie-list {
+      width: 100%;
+      flex-basis: 100%;
+    }
+    app-movie-info {
+      display: none;
+    }
+  }
+  .result-info {
+    font-size: 0.8rem;
+  }
+}
 }
